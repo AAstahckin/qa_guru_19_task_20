@@ -1,0 +1,16 @@
+HELP.md
+build/
+gradlew
+gradle
+settings.gradle
+gradlew.bat
+
+
+### IntelliJ IDEA ###
+.idea
+
+### Gradle ###
+.gradle
+
+### Logs ###
+*.log
