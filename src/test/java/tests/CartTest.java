@@ -28,8 +28,7 @@ public class CartTest extends TestBase {
     @Description("Добавление товара в карзину")
     void addItemToCartTest() {
             Document document = Jsoup.parse(sendGetMyAccountRequest("/cart", authCookieValue, response200Spec));
-            countOfItems = Integer.parseInt(document.select(".cart-qty")
-                    .text().replaceAll("[()]", ""));
+            countOfItems = Integer.parseInt(document.select(".cart-qty").text().replaceAll("[()]", ""));
         AddingItemResponse response = sendPostAddItemToCartRequest(
                 "/addproducttocart/details/72/1", authCookieValue, data, AddingItemResponse.class, response200Spec);
         assertionsAddProductResponse(response, countOfItems, quantity);
