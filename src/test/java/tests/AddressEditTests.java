@@ -53,4 +53,5 @@ public class AddressEditTests extends TestBase{
         sendPostAddressEditRequest("/customer/addressedit/" + addressId, authCookieValue, response302Spec, data);
         assertionsAddressResponse(sendGetAddressRequest("/customer/addresses", authCookieValue, response200Spec), data);
     }
+
 }

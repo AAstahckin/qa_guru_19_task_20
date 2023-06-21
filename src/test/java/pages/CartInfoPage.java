@@ -17,13 +17,11 @@ public class CartInfoPage {
             pageTitle = $(".page-title");
 
     public CartInfoPage openPage() {
-        Allure.step("Открываем страницу /cart");
-        open("/cart");
+        step("Открываем страницу /cart", () ->open("/cart"));
         return this;
     }
 
     public CartInfoPage checkOrders(String orderItem) {
-        Allure.step("Проверяем блок Orders");
         step("Проверяем что текст 'Build your own cheap computer' присутствует", () ->
                 productName.shouldHave(text("Build your own cheap computer")));
         step("Проверяем что текст 'Processor: Slow' присутствует", () ->
@@ -32,21 +30,18 @@ public class CartInfoPage {
     }
 
     public CartInfoPage clickCheckbox() {
-        Allure.step("Выбираем товар");
         step("Нажимаем на чекбокс", () ->
                 removeCard.click());
         return this;
     }
 
     public CartInfoPage clickDeleteButton() {
-        Allure.step("Удадяем товар из корзины");
         step("Нажимаем на кнопку 'Update shopping cart'", () ->
                 cartButton.click());
         return this;
     }
 
     public CartInfoPage checkDeleteItemCard() {
-        Allure.step("Кликаем на кнопку удаления товара из корзины");
         step("Проверяем что текст 'Shopping cart' присутствует", () ->
                 pageTitle.shouldHave(text("Shopping cart")));
         return this;

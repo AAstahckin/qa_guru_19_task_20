@@ -28,7 +28,7 @@ public class LoginTests extends TestBase{
     }
 
     @Test
-    @DisplayName("Проверка авторизации через API")
+    @DisplayName("Проверка успешной авторизации через API")
     @Description("Проверка авторизации")
     public void loginTestDecomposition() {
         open("/Content/jquery-ui-themes/smoothness/images/ui-bg_flat_75_ffffff_40x100.png");

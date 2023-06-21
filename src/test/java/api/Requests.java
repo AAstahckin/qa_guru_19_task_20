@@ -58,5 +58,4 @@ public class Requests {
         return response.as(responseClass);
     }
 
-
 }
