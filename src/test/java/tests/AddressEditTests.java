@@ -7,7 +7,6 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 import java.util.Map;
-
 import static api.Requests.sendGetAddressRequest;
 import static api.Requests.sendPostAddressEditRequest;
 import static data.DataTestAddressValues.getValuesMapAddress;
