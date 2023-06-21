@@ -32,8 +32,7 @@ public class AddressEditTests extends TestBase{
     @DisplayName("Проверка негативного сценария отправки запроса без обязательного параметра")
     @Description("Проверка негативных сценариев")
     @ParameterizedTest(name = " : [{0}]")
-    @ValueSource(strings = {
-            "Address.Email", "Address.LastName", "Address.CountryId",
+    @ValueSource(strings = {"Address.Email", "Address.LastName", "Address.CountryId",
             "Address.FirstName", "Address.City", "Address.Address1",
             "Address.ZipPostalCode", "Address.PhoneNumber"})
     public void negativeTests(String param) {
@@ -46,8 +45,7 @@ public class AddressEditTests extends TestBase{
     @DisplayName("Проверка негативного сценария отправки запроса без необязательного параметра")
     @Description("Проверка негативных сценариев")
     @ParameterizedTest(name = " : [{0}]")
-    @ValueSource(strings = {
-            "Address.Company", "Address.Address2"})
+    @ValueSource(strings = {"Address.Company", "Address.Address2"})
     public void negativeTests3(String param) {
         String addressId = getValuesMapAddress().get("Address.Id");
         Map<String, String> data = getValuesMapAddress();
