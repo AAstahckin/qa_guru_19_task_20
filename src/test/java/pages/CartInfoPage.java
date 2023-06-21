@@ -32,21 +32,21 @@ public class CartInfoPage {
     }
 
     public CartInfoPage clickCheckbox() {
-        Allure.step("Кликаем на чекбокс товара");
+        Allure.step("Выбираем товар");
         step("Нажимаем на чекбокс", () ->
                 removeCard.click());
         return this;
     }
 
     public CartInfoPage clickDeleteButton() {
-        Allure.step("Кликаем на кнопку удаления товара из карзины");
+        Allure.step("Удадяем товар из корзины");
         step("Нажимаем на кнопку 'Update shopping cart'", () ->
                 cartButton.click());
         return this;
     }
 
     public CartInfoPage checkDeleteItemCard() {
-        Allure.step("Кликаем на кнопку удаления товара из карзины");
+        Allure.step("Кликаем на кнопку удаления товара из корзины");
         step("Проверяем что текст 'Shopping cart' присутствует", () ->
                 pageTitle.shouldHave(text("Shopping cart")));
         return this;

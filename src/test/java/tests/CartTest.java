@@ -32,7 +32,7 @@ public class CartTest extends TestBase {
 
     @Test
     @DisplayName("Проверка позитивного сценария с добавлением товара в корзину")
-    @Description("Добавление товара в карзину")
+    @Description("Добавление товара в корзину")
     void addItemToCartTest() {
         Document document = Jsoup.parse(sendGetMyAccountRequest("/cart", authCookieValue, response200Spec));
         countOfItems = Integer.parseInt(document.select(".cart-qty")
@@ -43,7 +43,7 @@ public class CartTest extends TestBase {
     }
 
     @Test
-    @DisplayName("Проверка удаления товара из карзины")
+    @DisplayName("Проверка удаления товара из корзины")
     @Description("Удаление товара")
     void deleteItemToCartTest() {
         Document document = Jsoup.parse(sendGetMyAccountRequest("/cart", authCookieValue, response200Spec));
